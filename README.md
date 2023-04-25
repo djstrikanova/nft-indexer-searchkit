@@ -1,10 +1,5 @@
-## Searchkit Starter App
+## NFT Indexer Searchkit App
 
-Used to start new applications which use Searchkit. Based off the popular create-react-app. If you dont know about `create-react-app`, please read their [readme](https://github.com/facebookincubator/create-react-app/blob/master/README.md) and install create-react-app on your machine
-
-## Install instructions
-
-- git clone https://github.com/searchkit/searchkit-starter-app.git
-- cd searchkit-starter-app
-- yarn
-- npm start
+Allows searching of Elasticsearch instance of NFTs who had their images analyzed by CLIP.
+- Fork of https://github.com/searchkit/searchkit-starter-app.git
+- This is an old version of searchkit, so I need to update this repo to the latest version. (It doesn't work that easily so it's WIP)
