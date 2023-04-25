@@ -39,19 +39,30 @@ import "@elastic/eui/dist/eui_theme_light.css";
 import "./App.css";
 
 const config = {
-  host: "http://localhost:4000",
+  host: "http://nft-indexer-router.effectdao.tools",
   connectionOptions: {
 
   },
 
   index: "nfts",
   hits: {
-    fields: ["caption_model_vit_l_14_openai_f1","id","ipfs_hash"],
+    fields: ["caption_model_vit_l_14_openai","id","ipfs_hash"],
     size: 25
   },
   query: new MultiMatchQuery({
-    fields: ["caption_model_vit_l_14_openai_f1"],
-  })
+    fields: ["caption_model_vit_l_14_openai"],
+  }),
+  facets: [
+    new RefinementSelectFacet({
+      field: "associated_collections.keyword",
+      identifier: "associated_collections",
+      label: "Collection",
+      multipleSelect: true,
+      size: 20,
+      searchable: true
+    })
+
+    ]
 };
 
 const HitsList = ({ data }) => (
@@ -64,9 +75,9 @@ const HitsList = ({ data }) => (
                        style={{ maxWidth: "300px" }}>
                 <EuiImage
                     caption={
-                      hit.highlight && hit.highlight.caption_model_vit_l_14_openai_f1
-                          ? <span dangerouslySetInnerHTML={{ __html: hit.highlight.caption_model_vit_l_14_openai_f1 }} />
-                          : hit.fields.caption_model_vit_l_14_openai_f1 || "No field found"
+                      hit.highlight && hit.highlight.caption_model_vit_l_14_openai
+                          ? <span dangerouslySetInnerHTML={{ __html: hit.highlight.caption_model_vit_l_14_openai }} />
+                          : hit.fields.caption_model_vit_l_14_openai || "No field found"
                     }
                     src={"https://atomichub-ipfs.com/ipfs/" + hit.fields.ipfs_hash}
                     style={{ maxWidth: "300px" }}
@@ -92,15 +103,18 @@ const HitsList = ({ data }) => (
 );
 
 function App() {
-  const Facets = FacetsList([]);
+  const Facets = FacetsList(config.facets);
   const variables = useSearchkitVariables();
   const { results, loading } = useSearchkitSDK(config, variables);
+
+
   return (
     <EuiPage>
       <EuiPageSideBar>
         <SearchBar loading={loading} />
         <EuiHorizontalRule margin="m" />
         <Facets data={results} loading={loading} />
+
       </EuiPageSideBar>
       <EuiPageBody component="div">
         <EuiPageHeader>
