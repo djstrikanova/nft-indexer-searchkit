@@ -39,7 +39,7 @@ import "@elastic/eui/dist/eui_theme_light.css";
 import "./App.css";
 
 const config = {
-  host: "http://nft-indexer-router.effectdao.tools",
+  host: "https://nft-indexer-router.effectdao.tools",
   connectionOptions: {
 
   },
