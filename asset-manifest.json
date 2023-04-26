@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/nft-indexer-searchkit/static/css/main.1165ebe2.css",
-    "main.js": "/nft-indexer-searchkit/static/js/main.9f8848c1.js",
+    "main.js": "/nft-indexer-searchkit/static/js/main.a814472c.js",
     "icon.accessibility-js.js": "/nft-indexer-searchkit/static/js/icon.accessibility-js.8b1ce6ab.chunk.js",
     "icon.aggregate-js.js": "/nft-indexer-searchkit/static/js/icon.aggregate-js.20d7cb0a.chunk.js",
     "icon.alert-js.js": "/nft-indexer-searchkit/static/js/icon.alert-js.721851a9.chunk.js",
@@ -409,7 +409,7 @@
     "icon.wrench-js.js": "/nft-indexer-searchkit/static/js/icon.wrench-js.b49dffea.chunk.js",
     "index.html": "/nft-indexer-searchkit/index.html",
     "main.1165ebe2.css.map": "/nft-indexer-searchkit/static/css/main.1165ebe2.css.map",
-    "main.9f8848c1.js.map": "/nft-indexer-searchkit/static/js/main.9f8848c1.js.map",
+    "main.a814472c.js.map": "/nft-indexer-searchkit/static/js/main.a814472c.js.map",
     "icon.accessibility-js.8b1ce6ab.chunk.js.map": "/nft-indexer-searchkit/static/js/icon.accessibility-js.8b1ce6ab.chunk.js.map",
     "icon.aggregate-js.20d7cb0a.chunk.js.map": "/nft-indexer-searchkit/static/js/icon.aggregate-js.20d7cb0a.chunk.js.map",
     "icon.alert-js.721851a9.chunk.js.map": "/nft-indexer-searchkit/static/js/icon.alert-js.721851a9.chunk.js.map",
@@ -818,6 +818,6 @@
   },
   "entrypoints": [
     "static/css/main.1165ebe2.css",
-    "static/js/main.9f8848c1.js"
+    "static/js/main.a814472c.js"
   ]
 }
