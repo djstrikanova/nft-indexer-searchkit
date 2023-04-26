@@ -47,7 +47,7 @@ const config = {
   index: "nfts",
   hits: {
     fields: ["caption_model_vit_l_14_openai","id","ipfs_hash"],
-    size: 25
+    size: 27
   },
   query: new MultiMatchQuery({
     fields: ["caption_model_vit_l_14_openai"],
