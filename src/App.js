@@ -58,7 +58,7 @@ const config = {
       identifier: "associated_collections",
       label: "Collection",
       multipleSelect: true,
-      size: 20,
+      size: 75,
       searchable: true
     })
 
